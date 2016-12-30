@@ -1,0 +1,22 @@
+<h2>User Profile</h2>
+<div class="profile" *ngIf="profile">
+	<div>
+		<label>Email: </label>{{profile.email}}
+	</div>
+	<div>
+		<div>
+			<label>Name: </label> <input [(ngModel)]="profile.name"
+				placeholder="name" />
+		</div>
+		<div>
+			<label>Native Language: </label> <input
+				[(ngModel)]="profile.nativeLanguage" placeholder="name" />
+		</div>
+		<div>
+			<label>Language Studies: </label>
+			<ul class="languageStudies">
+				<li *ngFor="let study of  profile.languageStudies"><span class="languageStudy">{{study.language}}</span></li>
+			</ul>
+		</div>
+	</div>
+</div>
