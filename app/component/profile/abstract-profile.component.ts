@@ -23,7 +23,9 @@ export class AbstractProfileComponent implements OnInit {
   getProfile(): void {
     this.profileService.getProfile().then(profile => {
       this.profile = profile;
-      this.profile.nativeLanguage = this.languages[0];
+      if (profile.nativeLanguage === undefined) {
+        profile.nativeLanguage = this.languages[0];
+      }
     });
   }
   

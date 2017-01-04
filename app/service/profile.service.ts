@@ -8,8 +8,8 @@ export class ProfileService {
   
   initProfile(): Profile {
     var profile = new Profile();
-    profile.name = 'Alisa';
-    profile.email = 'alisa@gmail.com';
+    profile.name = 'Savi';
+    profile.email = 'savi@gmail.com';
     //profile.nativeLanguage = 'Zulu';
     return profile;
   }
@@ -18,5 +18,14 @@ export class ProfileService {
   
   getProfile(): Promise<Profile> {
     return Promise.resolve(this.profile);
+  }
+  
+  saveTempProfile(profile: Profile) {
+    this.profile = profile;
+  }
+  
+  saveProfile(profile: Profile) {
+    // TODO: Save profile to server
+    this.profile = profile;
   }
 }

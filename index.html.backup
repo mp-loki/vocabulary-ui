@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
 <html>
-
 <head>
   <base href="/">
-  <title i18n="Vocabulary">Vocabulary</title>
+  <title>Vocabulary</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	
   <!-- index.html -->
@@ -27,6 +25,5 @@
 <body>
   <my-app>Loading...</my-app>
 </body>
-<script src="dist/build.js"></script>
 
 </html>

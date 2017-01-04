@@ -13,6 +13,7 @@ export class CreateProfileComponent extends AbstractProfileComponent implements 
   }
       
   proceed():void {
+    this.profileService.saveTempProfile(this.profile);
     this.router.navigateByUrl('profile/select-language-studies');
   }
 }

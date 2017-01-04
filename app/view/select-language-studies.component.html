@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="css/profiles.css">
+<div *ngIf="profile">
+<h4>{{profile.name}}</h4>
+<h4>{{profile.nativeLanguage.name}}</h4>
 <h4>Select languages you want to study:</h4>
 <p>You can add more languages later</p>
 <div class="col-sm-12 col-lg-12 ">
@@ -5,8 +9,12 @@
 	       <label>Language Studies: </label>
 	   </div>
 	<div class="col-sm-6 col-lg-6" *ngFor="let language of getNonNativeLanguages()">
-		<div class="alert alert-info">
+		<div class="alert" [ngClass]="isSelectedLanguage(language) ? 'selected-lang' : 'non-selected-lang'" (click)="toggleLanguage(language)">
 		   <label>{{language.name}}</label>
 		</div>
 	</div>
+	<div class="row col-sm-12 text-center top-buffer">
+		<button (click)="save()" type="button" class="btn btn-info" i18n="Save">Save</button>
+	</div>
+</div>
 </div>
