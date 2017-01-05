@@ -12,6 +12,7 @@ import { AppRoutingModule, routedComponents } from './app-routing.module';
 import { HeroService } from './hero.service';
 import { ProfileService } from './service/profile.service';
 import { LanguageService } from './service/language.service';
+import { StudyService } from './service/study.service';
 import { HeroSearchComponent } from './hero-search.component';
 import { AddVocabularyEntryComponent } from './component/study/add-vocabulary-entry.component';
 
@@ -33,6 +34,7 @@ import { AddVocabularyEntryComponent } from './component/study/add-vocabulary-en
     HeroService,
     ProfileService,
     LanguageService,
+    StudyService,
   ],
   bootstrap: [AppComponent],
 })

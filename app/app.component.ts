@@ -6,16 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   moduleId: module.id,
   selector: 'my-app',
-  template: `
-    <h1>{{title}}</h1>
-    <div class="header-bar"></div>
-    <nav>
-      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-      <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
-      <a routerLink="/profile" routerLinkActive="active">Profile</a>
-    </nav>
-    <router-outlet></router-outlet>
-  `,
+  templateUrl: './view/html/app.component.html',
   styleUrls: ['app.component.css']
 })
 export class AppComponent implements OnInit {

@@ -3,19 +3,27 @@ import { Http, Response } from '@angular/http';
 import { Profile } from '../model/profile';
 import { Language } from '../model/language';
 
-const LANGUAGES = [
-  {name: 'English',    code: 'en'},
-  {name: 'Deutsch',    code: 'de'},
-  {name: 'Français',   code: 'fr'},
-  {name: 'Español',    code: 'es'},
-  {name: 'Українська', code: 'ua'},
+const LANGUAGES: Language[] = [
+  { name: 'English', code: 'en' },
+  { name: 'Deutsch', code: 'de' },
+  { name: 'Français', code: 'fr' },
+  { name: 'Español', code: 'es' },
+  { name: 'Українська', code: 'ua' },
 ];
 
 @Injectable()
 export class LanguageService {
   constructor(private http: Http) { }
-  
-  getLanguages():Language[] {
+
+  getLanguages(): Language[] {
     return LANGUAGES;
+  }
+
+  getLanguageByName(name: string): Language {
+    return LANGUAGES.find(language => language.name === name);
+  }
+
+  getBoards(language: Language) {
+
   }
 }

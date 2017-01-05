@@ -8,7 +8,7 @@ import { Language } from '../../model/language';
   templateUrl: '../../view/html/select-language-studies.component.html',
 })
 export class SelectLanguageStudiesComponent extends AbstractComponent implements OnInit {
-  
+
   constructor(injector: Injector) {
     super(injector);
   }
@@ -19,7 +19,8 @@ export class SelectLanguageStudiesComponent extends AbstractComponent implements
   }
 
   getNonNativeLanguages(): Language[] {
-    let nativeLangIdx = this.languages.indexOf(this.profile.nativeLanguage);
+    let nativeLang = this.languages.find(lang => lang.name === this.profile.nativeLanguage.name);
+    let nativeLangIdx = this.languages.indexOf(nativeLang);
     let nonNativeLangs = this.languages.slice(0);
     nonNativeLangs.splice(nativeLangIdx, 1);
     return nonNativeLangs;
@@ -64,7 +65,7 @@ export class SelectLanguageStudiesComponent extends AbstractComponent implements
   }
 
   private noLangsSelected(): boolean {
-   if (typeof this.profile === 'undefined' || this.profile === null
+    if (typeof this.profile === 'undefined' || this.profile === null
       || typeof this.profile.languages === 'undefined' || this.profile.languages === null
       || this.profile.languages.length === 0) {
       return true;

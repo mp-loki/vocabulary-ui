@@ -11,7 +11,7 @@ export class ProfileService {
     let profile = new Profile();
     profile.name = 'Savi';
     profile.email = 'savi@gmail.com';
-  //  profile.nativeLanguage = { name: 'English', code: 'en' };
+    profile.nativeLanguage = { name: 'English', code: 'en' };
     return profile;
   }
 

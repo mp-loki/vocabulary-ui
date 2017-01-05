@@ -6,20 +6,20 @@ import { LanguageService } from '../service/language.service';
 import { Router } from '@angular/router';
 
 export class AbstractComponent implements OnInit {
-   
+
   protected router: Router;
   protected profileService: ProfileService;
   protected languageService: LanguageService;
-  
+
   profile: Profile;
   languages: Language[];
-  
+
   constructor(injector: Injector) {
     this.router = injector.get(Router);
     this.profileService = injector.get(ProfileService);
     this.languageService = injector.get(LanguageService);
   }
-  
+
   getProfile(): void {
     this.profileService.getProfile().then(profile => {
       this.profile = profile;
@@ -28,13 +28,13 @@ export class AbstractComponent implements OnInit {
       }
     });
   }
-  
+
   getLanguages(): void {
     this.languages = this.languageService.getLanguages();
   }
-  
+
   ngOnInit(): void {
     this.getLanguages();
-    this.getProfile(); 
+    this.getProfile();
   }
 }

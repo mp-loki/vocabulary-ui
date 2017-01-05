@@ -6,19 +6,22 @@
 		<label>Email: </label>{{profile.email}}
 	</div>
 	<div>
-		<div>
+		<div class="col-sm-8">
 			<label>Name: {{profile.name}}</label>
 		</div>
-		<div>
+		<div class="col-sm-8">
 			<label>Native Language: {{profile.nativeLanguage.name}}</label>
 		</div>
-		<div>
+		<div class="col-sm-8">
 			<div>
 				<label>Language Studies: </label>
 			</div>
-			<div *ngFor="let language of  profile.languages" class="alert studied-lang col-sm-8" (click)="openLanguageBoards(language)">
+			<div *ngFor="let language of  profile.languages" class="alert studied-lang col-sm-12" (click)="openLanguageBoards(language)">
 			   <label>{{language.name}}</label><span class="float-right flag-icon flag-icon-{{language.code}}"></span>
 			</div>
+		</div>
+		<div class="col-sm-8">
+			<a routerLink="/profile/select-language-studies" class="btn btn-success btn-circle btn-xl float-right"><i class="glyphicon glyphicon-plus"></i></a>
 		</div>
 	</div>
 </div>
