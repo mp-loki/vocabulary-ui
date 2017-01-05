@@ -1,11 +1,11 @@
 import { Injector, OnInit } from '@angular/core';
-import { Profile } from '../../model/profile';
-import { Language } from '../../model/language';
-import { ProfileService } from '../../service/profile.service';
-import { LanguageService } from '../../service/language.service';
+import { Profile } from '../model/profile';
+import { Language } from '../model/language';
+import { ProfileService } from '../service/profile.service';
+import { LanguageService } from '../service/language.service';
 import { Router } from '@angular/router';
 
-export class AbstractProfileComponent implements OnInit {
+export class AbstractComponent implements OnInit {
    
   protected router: Router;
   protected profileService: ProfileService;

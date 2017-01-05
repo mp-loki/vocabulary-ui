@@ -1,5 +1,5 @@
 import { Component, Injector, OnInit } from '@angular/core';
-import { AbstractProfileComponent } from './abstract-profile.component';
+import { AbstractComponent } from '../abstract.component';
 import { Language } from '../../model/language';
 
 @Component({
@@ -7,7 +7,7 @@ import { Language } from '../../model/language';
   selector: 'select-language-studies',
   templateUrl: '../../view/select-language-studies.component.html',
 })
-export class SelectLanguageStudiesComponent extends AbstractProfileComponent implements OnInit {
+export class SelectLanguageStudiesComponent extends AbstractComponent implements OnInit {
   
   constructor(injector: Injector) {
     super(injector);
@@ -48,16 +48,27 @@ export class SelectLanguageStudiesComponent extends AbstractProfileComponent imp
   }
 
   isSelectedLanguage(language: Language): boolean {
-    if (typeof this.profile === 'undefined' || this.profile === null
-      || typeof this.profile.languages === 'undefined' || this.profile.languages === null
-      || this.profile.languages.length === 0) {
+    if (this.noLangsSelected()) {
       return false;
     }
     return (typeof this.profile.languages.find(lang => language.name === lang.name) !== 'undefined');
   }
 
+  saveEnabled(): boolean {
+    return !this.noLangsSelected();
+  }
+
   save(): void {
     this.profileService.saveProfile(this.profile);
     this.router.navigateByUrl('/');
+  }
+
+  private noLangsSelected(): boolean {
+   if (typeof this.profile === 'undefined' || this.profile === null
+      || typeof this.profile.languages === 'undefined' || this.profile.languages === null
+      || this.profile.languages.length === 0) {
+      return true;
+    }
+    return false;
   }
 }

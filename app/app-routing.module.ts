@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
 import { HeroesComponent } from './heroes.component';
+import { HomeComponent } from './component/home/home.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { ProfileComponent } from './component/profile/profile.component';
 import { CreateProfileComponent } from './component/profile/create-profile.component';
@@ -11,8 +12,12 @@ import { SelectLanguageStudiesComponent } from './component/profile/select-langu
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/dashboard',
+    redirectTo: '/home',
     pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   },
   {
     path: 'dashboard',
@@ -48,6 +53,7 @@ export class AppRoutingModule { }
 
 export const routedComponents = [
   DashboardComponent,
+  HomeComponent,
   HeroesComponent,
   HeroDetailComponent,
   ProfileComponent,

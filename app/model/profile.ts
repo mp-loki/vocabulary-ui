@@ -1,4 +1,3 @@
-import { LanguageStudy } from './language-study';
 import { Language } from './language';
 
 export class Profile {
@@ -7,5 +6,4 @@ export class Profile {
   name: string;
   nativeLanguage: Language;
   languages: Language[];
-  languageStudies: LanguageStudy[];
 }

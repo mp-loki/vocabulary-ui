@@ -7,3 +7,6 @@ button { padding: 0.2em; font-size: 14px}
 .top-buffer {
 	margin-top: 20px;
 }
+.float-right {
+	float: right;
+}

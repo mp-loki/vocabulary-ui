@@ -1,12 +1,12 @@
 import { Component, Injector, OnInit } from '@angular/core';
-import { AbstractProfileComponent } from './abstract-profile.component';
+import { AbstractComponent } from '../abstract.component';
 
 @Component({
   moduleId: module.id,
   selector: 'create-profile',
   templateUrl: '../../view/create-profile.component.html',
 })
-export class CreateProfileComponent extends AbstractProfileComponent implements OnInit {
+export class CreateProfileComponent extends AbstractComponent implements OnInit {
   
   constructor(injector: Injector) {
     super(injector);
