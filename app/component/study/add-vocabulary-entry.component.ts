@@ -4,16 +4,12 @@ import { AbstractComponent } from '../abstract.component';
 
 @Component({
   moduleId: module.id,
-  selector: 'home-component',
-  templateUrl: '../../view/html/home.component.html',
+  selector: 'add-entry',
+  templateUrl: '../../view/html/add-vocabulary-entry.component.html',
 })
-export class HomeComponent extends AbstractComponent {
-
+export class AddVocabularyEntryComponent extends AbstractComponent {
+  
   constructor(injector: Injector) {
     super(injector);
-  }
-
-  openLanguageBoards(language: Language): void {
-    this.router.navigateByUrl('/study/' + language.name);
   }
 }

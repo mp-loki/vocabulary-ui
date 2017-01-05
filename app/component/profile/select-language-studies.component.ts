@@ -5,7 +5,7 @@ import { Language } from '../../model/language';
 @Component({
   moduleId: module.id,
   selector: 'select-language-studies',
-  templateUrl: '../../view/select-language-studies.component.html',
+  templateUrl: '../../view/html/select-language-studies.component.html',
 })
 export class SelectLanguageStudiesComponent extends AbstractComponent implements OnInit {
   

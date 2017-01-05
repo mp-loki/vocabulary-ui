@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   moduleId: module.id,
   selector: 'user-profile',
-  templateUrl: '../../view/profile.component.html',
+  templateUrl: '../../view/html/profile.component.html',
 })
 export class ProfileComponent implements OnInit {
 

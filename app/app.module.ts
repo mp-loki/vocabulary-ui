@@ -13,6 +13,7 @@ import { HeroService } from './hero.service';
 import { ProfileService } from './service/profile.service';
 import { LanguageService } from './service/language.service';
 import { HeroSearchComponent } from './hero-search.component';
+import { AddVocabularyEntryComponent } from './component/study/add-vocabulary-entry.component';
 
 @NgModule({
   imports: [
@@ -25,13 +26,14 @@ import { HeroSearchComponent } from './hero-search.component';
   declarations: [
     AppComponent,
     HeroSearchComponent,
+    AddVocabularyEntryComponent,
     routedComponents
   ],
   providers: [
     HeroService,
     ProfileService,
-    LanguageService
+    LanguageService,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

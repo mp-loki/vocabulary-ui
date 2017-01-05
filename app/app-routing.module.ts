@@ -8,6 +8,7 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { ProfileComponent } from './component/profile/profile.component';
 import { CreateProfileComponent } from './component/profile/create-profile.component';
 import { SelectLanguageStudiesComponent } from './component/profile/select-language-studies.component';
+import { StudyComponent } from './component/study/study.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
     path: 'profile/select-language-studies',
     component: SelectLanguageStudiesComponent
   },
+  {
+    path: 'study/:language',
+    component: StudyComponent
+  },
 ];
 
 @NgModule({
@@ -58,5 +63,6 @@ export const routedComponents = [
   HeroDetailComponent,
   ProfileComponent,
   CreateProfileComponent,
-  SelectLanguageStudiesComponent
+  SelectLanguageStudiesComponent,
+  StudyComponent
 ];

@@ -20,16 +20,16 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'Vocabulary';
-   profile: Profile;
-  
+  profile: Profile;
+
   constructor(
     private router: Router,
     private profileService: ProfileService) { }
-  
+
   ngOnInit(): void {
     this.profileService.getProfile().then(profile => {
       this.profile = profile;
-      if (typeof profile.nativeLanguage === 'undefined' 
+      if (typeof profile.nativeLanguage === 'undefined'
         || profile.nativeLanguage == null || profile.nativeLanguage === null) {
         this.router.navigateByUrl('/profile/create-profile');
       }

@@ -4,7 +4,7 @@ import { AbstractComponent } from '../abstract.component';
 @Component({
   moduleId: module.id,
   selector: 'create-profile',
-  templateUrl: '../../view/create-profile.component.html',
+  templateUrl: '../../view/html/create-profile.component.html',
 })
 export class CreateProfileComponent extends AbstractComponent implements OnInit {
   
