@@ -41,7 +41,7 @@ export class StudyComponent extends AbstractComponent implements OnInit, OnDestr
   }
 
   savePair(vocabularyPair: VocabularyPair) {
-    this.study.defaultBoard.vocabulary.push(vocabularyPair);
+    this.study.defaultBoard.vocabulary.unshift(vocabularyPair);
     this.studyService.saveStudy(this.study);
   }
 

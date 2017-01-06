@@ -37,4 +37,9 @@ export class AbstractComponent implements OnInit {
     this.getLanguages();
     this.getProfile();
   }
+
+  isEmpty(str: string): boolean {
+    if (!str || !str.trim) { return true; };
+    return false;
+  }
 }

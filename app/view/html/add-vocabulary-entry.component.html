@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../css/flag-icon.css">
+<div class="row">
 <div class="col-sm-12 col-lg-4" *ngIf="profile">
 	<div>
 		<label>Add Entry:</label>
@@ -12,6 +13,9 @@
 		<input type="text" class="form-control" name="logos-b" [(ngModel)]="newLogosB">
 	</div>
 </div>
-<div class="col-sm-12 col-lg-4">
-	<button (click)="savePair()" type="button" class="btn btn-info" i18n="Save">Save</button>
+</div>
+<div class="row">
+<div class="col-sm-12 col-lg-4 top-buffer">
+	<button (click)="savePair()" type="button" class="btn btn-info {{saveEnabled() ? 'active' : 'disabled'}}" i18n="Save">Save</button>
+</div>
 </div>

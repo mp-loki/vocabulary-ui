@@ -29,4 +29,8 @@ export class AddVocabularyEntryComponent extends AbstractComponent {
     this.newLogosA = null;
     this.newLogosB = null;
   }
+  
+  saveEnabled(): boolean {
+    return !this.isEmpty(this.newLogosA) && !this.isEmpty(this.newLogosB);
+  }
 }
