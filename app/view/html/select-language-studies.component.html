@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../css/profiles.css">
 <link rel="stylesheet" href="../css/flag-icon.css">
 <div *ngIf="profile">
 <h4>{{profile.name}}</h4>
@@ -10,7 +9,7 @@
 	       <label>Language Studies: </label>
 	   </div>
 	<div class="col-sm-6 col-lg-6" *ngFor="let language of getNonNativeLanguages()">
-		<div class="alert" [ngClass]="isSelectedLanguage(language) ? 'selected-lang' : 'non-selected-lang'" (click)="toggleLanguage(language)">
+		<div class="alert" [ngClass]="isSelectedLanguage(language) ? 'alert-success' : 'alert-border'" (click)="toggleLanguage(language)">
 		   <label>{{language.name}}</label><span class="float-right flag-icon flag-icon-{{language.code}}"></span>
 		</div>
 	</div>

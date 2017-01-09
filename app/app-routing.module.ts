@@ -9,6 +9,7 @@ import { ProfileComponent } from './component/profile/profile.component';
 import { CreateProfileComponent } from './component/profile/create-profile.component';
 import { SelectLanguageStudiesComponent } from './component/profile/select-language-studies.component';
 import { StudyComponent } from './component/study/study.component';
+import { QuizComponent } from './component/study/quiz.component';
 
 const routes: Routes = [
   {
@@ -48,6 +49,10 @@ const routes: Routes = [
     path: 'study/:language',
     component: StudyComponent
   },
+  {
+    path: 'study/:language/quiz',
+    component: QuizComponent
+  },
 ];
 
 @NgModule({
@@ -64,5 +69,6 @@ export const routedComponents = [
   ProfileComponent,
   CreateProfileComponent,
   SelectLanguageStudiesComponent,
-  StudyComponent
+  StudyComponent,
+  QuizComponent
 ];
