@@ -9,6 +9,7 @@ const LANGUAGES: Language[] = [
   { name: 'Français', code: 'fr' },
   { name: 'Español', code: 'es' },
   { name: 'Українська', code: 'ua' },
+  { name: '日本語', code: 'jp' },
 ];
 
 @Injectable()

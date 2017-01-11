@@ -37,6 +37,7 @@ export class StudyService {
       let question: QuizQuestion = this.getQuizQuestion(pair, study.defaultBoard.vocabulary);
       quiz.questions.push(question);
     }
+    this.shuffle(quiz.questions);
     return quiz;
   }
 
@@ -82,6 +83,9 @@ export class StudyService {
     if (studyLanguage.code === 'ua' && profileLanguage.code === 'en') {
       return this.getDefaultUkrainianVocabulary(studyLanguage, profileLanguage);
     };
+    if (studyLanguage.code === 'jp' && profileLanguage.code === 'en') {
+      return this.getDefaultJapaneseVocabulary(studyLanguage, profileLanguage);
+    };
     return [];
   }
 
@@ -115,4 +119,13 @@ export class StudyService {
       { logosA: 'мати', logosALanguage: studyLanguage, logosB: 'have', logosBLanguage: profileLanguage },
     ];
   }
+  private getDefaultJapaneseVocabulary(studyLanguage: Language, profileLanguage: Language): VocabularyPair[] {
+        return [
+      { logosA: 'ア', logosALanguage: studyLanguage, logosB: 'a', logosBLanguage: profileLanguage },
+      { logosA: 'イ', logosALanguage: studyLanguage, logosB: 'i', logosBLanguage: profileLanguage },
+      { logosA: 'ウ', logosALanguage: studyLanguage, logosB: 'u', logosBLanguage: profileLanguage },
+      { logosA: 'エ', logosALanguage: studyLanguage, logosB: 'e', logosBLanguage: profileLanguage },
+      { logosA: 'オ', logosALanguage: studyLanguage, logosB: 'o', logosBLanguage: profileLanguage },
+    ];
+      }  
 }
